@@ -6,7 +6,8 @@ header {
   align-items: center;
   background-color: #d98200;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  /* child-property */
+  width: 100%;
+  
 }
 
 h2 {
@@ -15,4 +16,5 @@ h2 {
   align-items: center;
   /* child-property */
   flex-grow: 1;
+  width: 100%;
 }
