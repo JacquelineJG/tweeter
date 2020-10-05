@@ -1,3 +1,4 @@
+/* header contains css styling for profile info */
 header {
   display: flex;
   flex-direction: column;
@@ -9,7 +10,7 @@ header {
   width: 100%;
   
 }
-
+/* h2 contains styling info for name of profile specifically */
 h2 {
   display: flex;
   justify-content: center;
