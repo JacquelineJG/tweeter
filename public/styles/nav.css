@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px;
+  align-items: center;
+  flex-grow: 1;
+}
+
+span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5em;
+  font-size: 45px;
+  margin: 1.5em;
+  /* child-property */
+  flex-grow: 1;
+}
