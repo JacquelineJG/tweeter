@@ -12,16 +12,15 @@
 
 .form-footer {
   justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-top: 10px;
 }
 
 .tweet-button {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   color: #ffffff;
-  
 }
 
 .new-tweet output {
@@ -29,7 +28,8 @@
   justify-content: flex-end;
   align-items: center;
   font-family: 'Bungee', sans-serif;
-
+  margin-top: 0px;
+  flex-direction: row;
 }
 
 .new-tweet label {
@@ -52,3 +52,6 @@
   border-bottom-width: 5px;
 }
 
+.red {
+  color: red;
+}

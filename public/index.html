@@ -9,18 +9,21 @@
 
     <!-- Custom Fonts Bungee and Source Sans Pro-->
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -29,7 +32,7 @@
       <span>tweeter</span>
       <section class='right-nav'>
       <div class='write-tweet'>Write a new tweet</div>
-      <div class='arrowhead'>&#8964;</div>
+      <i class="fa fa-angle-double-down" style="font-size:28px;color:red"></i>
       </section>
     </nav>
     <header>
@@ -52,6 +55,26 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweet-container">
+        <article>
+          <div class='tweet-top'>
+            <div>
+              <img src="/images/profile-hex.png" width="60" height="60">
+            </div>
+            <div class='name'>Kermit the Frog</div>
+            <div class='handle'>@FroggyFrog</div>
+          </div>
+          <div class='tweet-middle'>
+            <p>It's not easy being green</p>
+          </div>
+          <div class='tweet-bottom'>
+            <div class='date'>2 days ago</div>
+            <i class="fa fa-flag" style="font-size:20px;color:#6e50f2"></i>
+            <i class="fa fa-retweet" style="font-size:20px;color:#6e50f2"></i>
+            <i class="fa fa-heart" style="font-size:20px;color:#6e50f2"></i>
+          </div>
+        </article>
       </section>
     </main>
   </body>

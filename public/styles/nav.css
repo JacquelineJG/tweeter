@@ -7,6 +7,9 @@ nav {
   align-items: center;
   width: 100%;
   flex-grow: 1;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
 }
 /* title specific */
 span {
@@ -29,21 +32,20 @@ span {
   justify-content: flex-end;
   flex-direction: row;
   align-items: center;
-  margin: 1.5em;
+  margin-right: 1.5em;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   /* child-property */
   flex-grow: 1;
   margin-bottom: 0px;
 }
-.arrowhead {
+.i {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   align-items: baseline;
+  align-items: center;
   margin: 1.5em;
-  color: red;
-  font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   /* child-property */
   flex-grow: 1;
