@@ -8,7 +8,7 @@ nav {
   width: 100%;
   flex-grow: 1;
 }
-/* title specific styling */
+/* title specific */
 span {
   display: flex;
   justify-content: flex-start;
@@ -18,4 +18,34 @@ span {
   margin: 1.5em;
   /* child-property */
   flex-grow: 1;
+}
+.right-nav{
+  display: flex;
+  flex-direction: column;
+}
+
+.write-tweet {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5em;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* child-property */
+  flex-grow: 1;
+  margin-bottom: 0px;
+}
+.arrowhead {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 1.5em;
+  color: red;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* child-property */
+  flex-grow: 1;
+  margin-top: 0px;
 }
