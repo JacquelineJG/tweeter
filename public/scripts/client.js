@@ -4,34 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
-
 const renderTweets = function(tweets) {
   const tweetContainer = $('.tweet-container').html('')
   console.log(tweets);
@@ -44,7 +16,15 @@ const renderTweets = function(tweets) {
   // takes return value and appends it to the tweets container
 }
 
+const escape =  function(str) {
+  console.log('str', str)
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = function(tweet) {
+  const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
 let $tweet = $(`<article>
 <div class='tweet-top'>
 <div>
@@ -54,7 +34,7 @@ let $tweet = $(`<article>
 <div class='handle'>${tweet.user.handle}</div>
 </div>
 <div class='tweet-middle'>
-<p>${tweet.content.text}</p>
+<p>${safeHTML}</p>
 </div>
 <div class='tweet-bottom'>
 <div class='date'>
@@ -76,17 +56,27 @@ $(document).ready(function() {
   console.log('Ready!')
   $('.tweet-form').submit(function(event) {
     event.preventDefault()
-    if($('.new-tweet .counter').val() < 140 && $('.new-tweet .counter').val() > 0){
+    if($('.new-tweet .counter').val() < 140 && $('.new-tweet .counter').val() > 0) {
     $.ajax('/tweets', 
     { method: 'POST', 
       data: $(this).serialize()
     }).then(function() {
       loadTweets()
+      $('#tweet-text').val('')
+      $('.new-tweet .counter').val(140)
     })
     } else if ($('.new-tweet .counter').val() == 140) {
-      alert('Invalid: Tweet cannot be blank');
+      $('.error').prepend('Error: Tweet cannot be empty').hide().slideDown(1000);
+      setTimeout(function() { 
+        $(".error").slideUp(); 
+        $(".error").empty();
+      }, 3000);
     } else if ($('.new-tweet .counter').val() <= 0) {
-      alert('Invalid: Tweet cannot be more than 140 characters')
+      $('.error').prepend('Error: Tweet cannot be more than 140 characters').hide().slideDown(1000);
+      setTimeout(function() { 
+        $(".error").slideUp(); 
+        $(".error").empty();
+      }, 3000);
     }
   
   }),
@@ -94,7 +84,6 @@ $(document).ready(function() {
   $(loadTweets = function() {
       $.ajax('/tweets', { method: 'GET' })
       .then(function (response) {
-        console.log(response);
         renderTweets(response);
       });
     });
