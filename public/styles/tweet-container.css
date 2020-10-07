@@ -23,7 +23,15 @@ article:hover{
   color: #beb7eb;
 }
 
-article:hover .tweet-top .handle {
+.symbols {
+  display: none;
+}
+
+article:hover .tweet-bottom .symbols { 
+  display: block;
+}
+
+article:hover .tweet-top .handle { 
   display: block;
 }
 .tweet-top {
@@ -83,7 +91,7 @@ article:hover .tweet-top .handle {
   width: 100%;
 }
 
-.date {
+.date .time {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;

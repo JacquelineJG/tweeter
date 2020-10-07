@@ -5,6 +5,7 @@ header {
   height: 400px;
   justify-content: center;
   align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #d98200;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   width: 100%;
@@ -15,6 +16,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
   /* child-property */
   flex-grow: 1;
   width: 100%;
