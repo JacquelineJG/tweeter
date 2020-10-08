@@ -23,3 +23,8 @@ Welcome to Tweeter! You can create tweets and have them immediately displayed to
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+ 
+!["Screenshot of wide screen Tweeter page"](https://github.com/JacquelineJG/tweeter/blob/master/docs/Laptop-Screen-Tweeter-Page.png?raw=true)
+!["Screenshot of small screen Tweeter page"](https://github.com/JacquelineJG/tweeter/blob/master/docs/Smaller-Screen-Tweeter-Page.png?raw=true)
