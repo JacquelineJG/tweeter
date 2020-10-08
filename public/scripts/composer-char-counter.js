@@ -6,7 +6,7 @@ $(document).ready(function() {
 $(document).on('input', 'textarea', function() {
   const max = 140;
   let currentCount = $(this).val().length;
-  let charRemaining = max - currentCount;
+  const charRemaining = max - currentCount;
   $('.new-tweet .counter').text(charRemaining)
   if (charRemaining < 0) {
     $('.new-tweet .counter').addClass("red");

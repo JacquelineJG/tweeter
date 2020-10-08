@@ -84,6 +84,7 @@ $(document).ready(function() {
         $('.new-tweet .counter').val(140)
       })
     } else if ($('.new-tweet .counter').val() == 140) {
+      // error message stays hidden until error occurs, has error that appears, then disappears
       $('.error').text('Error: Tweet cannot be empty').hide().slideDown(2000);
       setTimeout(function() { 
         $(".error").slideUp(); 

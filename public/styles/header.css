@@ -11,7 +11,7 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   width: 100%;
   height: 400px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 /* h2 contains styling info for name of profile specifically */
 h2 {
@@ -22,4 +22,8 @@ h2 {
   width: 100%;
   /* child-property */
   flex-grow: 1;
+}
+
+.user {
+  font-size: 40px;
 }

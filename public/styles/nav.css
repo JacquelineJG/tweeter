@@ -51,7 +51,7 @@ span {
   /* child-property */
   flex-grow: 1; 
 }
-
+/* red chevron arros */
 #chevron {
   display: flex;
   text-rendering: auto;
@@ -60,10 +60,6 @@ span {
   justify-content: center;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
-}
-
-.user {
-  font-size: 40px;
 }
 /* turns nav orange when below 768px */
 @media only screen and (max-width: 768px) {

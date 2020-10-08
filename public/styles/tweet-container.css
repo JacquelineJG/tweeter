@@ -13,16 +13,15 @@ article {
 }
 
 article:hover{
-  
   box-shadow: 5px 5px rgba(190, 183, 235);
-  
 }
+
 .handle {
   display: none;
   padding: 25px;
   color: #beb7eb;
 }
-
+/* display none on symbols so they appear only on hover */
 .symbols {
   display: none;
 }
@@ -34,6 +33,7 @@ article:hover .tweet-bottom .symbols {
 article:hover .tweet-top .handle { 
   display: block;
 }
+/* outermost styling for top of tweet: name, image and handle */
 .tweet-top {
   display: flex;
   width:100%;
@@ -42,6 +42,7 @@ article:hover .tweet-top .handle {
   margin-top: 0.5em;
   font-size: 25px;
 }
+/* outermost styling for middle of tweet: tweet content */
 .tweet-middle {
   display: flex;
   width:95%;
@@ -50,6 +51,7 @@ article:hover .tweet-top .handle {
   font-size: 25px;
   border-bottom: 5px solid;
 }
+/* outermost styling for bottom of tweet: dynamic time and icons */
 .tweet-bottom {
   display: flex;
   width:95%;
@@ -61,7 +63,7 @@ article:hover .tweet-top .handle {
   border-top-color: #545149;
   border-top-width: 5px;
 }
-
+/* image for top of tweet */
 .img {
   display: flex;
   justify-content: flex-end;
@@ -71,7 +73,7 @@ article:hover .tweet-top .handle {
   /* child-property */
   flex-grow: 1;
 }
-
+/* top of tweet name */
 .name {
   display: flex;
   justify-content: flex-start;
@@ -80,7 +82,7 @@ article:hover .tweet-top .handle {
   /* child-property */
   flex-grow: 2;
 }
-
+/* actual tweet content */
 .p {
   display: flex;
   justify-content: flex-start;
@@ -90,7 +92,7 @@ article:hover .tweet-top .handle {
   flex-grow: 1;
   width: 100%;
 }
-
+/* dynamic time */
 .time {
   display: flex;
   justify-content: flex-start;
