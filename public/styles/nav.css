@@ -1,15 +1,14 @@
 /* nav bar styling info*/
 nav {
   display: flex;
+  align-items: center;
   background-color: #4056A1;
   color: #ffffff;
   height: 120px;
-  align-items: center;
   width: 100%;
-  flex-grow: 1;
-  position: fixed;
   top: 0; 
-  width: 100%; 
+  position: fixed;
+  flex-grow: 1;
 }
 /* title specific */
 span {
@@ -18,10 +17,10 @@ span {
   align-items: center;
   margin: 1.5em;
   font-size: 45px;
-  margin: 1.5em;
   /* child-property */
   flex-grow: 1;
 }
+
 .right-nav{
   display: flex;
   flex-direction: column;
@@ -33,35 +32,40 @@ span {
   flex-direction: row;
   align-items: center;
   margin-right: 1.5em;
+  margin-bottom: 0px;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   /* child-property */
-  flex-grow: 1;
-  margin-bottom: 0px;
+  flex-grow: 1; 
 }
-/* .i {
+/* image i and fa needed for spacing of downward chevron arrows */
+.i {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   align-items: baseline;
   align-items: flex-end;
   margin: 1.5em;
+  margin-top: 0px;
   font-family: 'Source Sans Pro', sans-serif;
   /* child-property */
-  flex-grow: 1;
-  margin-top: 0px;
-} */
-.fa {
+  flex-grow: 1; 
+}
+
+#chevron {
   display: flex;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   align-items: center;
   justify-content: center;
-
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
 }
 
+.user {
+  font-size: 40px;
+}
+/* turns nav orange when below 768px */
 @media only screen and (max-width: 768px) {
   nav {
     background-color: #d98200;

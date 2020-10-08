@@ -21,8 +21,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@latest/dist/timeago.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -30,31 +29,32 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    
     <nav>
       <span>tweeter</span>
       <section class='right-nav'>
-      <div class='write-tweet'>Write a new tweet</div>
-      <i class="fa fa-angle-double-down" style="font-size:28px;color:red"></i>
+        <div class='write-tweet'>
+          <text><b>Write</b> a new tweet</text>
+        </div>
+        <i id="chevron"class="fa fa-angle-double-down" style="font-size:28px;color:red"></i>
       </section>
     </nav>
     <div class='layout'>
+    <!-- Header holding user name and photo -->
     <header>
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <br>
-      <div>
-          <h2>Kermit the Frog</h2>
+      <div class='user'>
+        <text><b>Kermit</b> the Frog</text>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" class="tweet-form">
           <div class="error"></div>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="form-footer">
             <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -63,28 +63,8 @@
       </section>
       <section class="tweet-container">
         <article>
-          <div class='tweet-top'>
-            <div>
-              <img src="/images/profile-hex.png" width="60" height="60">
-            </div>
-            <div class='name'>Kermit the Frog</div>
-            <div class='handle'>@FroggyFrog</div>
-          </div>
-          <div class='tweet-middle'>
-            <p>It's not easy being green</p>
-          </div>
-          <div class='tweet-bottom'>
-            <div class='time'>
-            </div>
-            <div class='symbols'>
-            <i class="fa fa-flag" style="font-size:20px;color:#6e50f2"></i>
-            <i class="fa fa-retweet" style="font-size:20px;color:#6e50f2"></i>
-            <i class="fa fa-heart" style="font-size:20px;color:#6e50f2"></i>
-            </div>
-          </div>
         </article>
       </section>
     </main>
-  </div>
   </body>
 </html>

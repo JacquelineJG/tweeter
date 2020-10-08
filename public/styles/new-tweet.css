@@ -50,6 +50,7 @@
   border-top-color: #f4f1ec;
   border-bottom-color: #545149;
   border-bottom-width: 5px;
+  font-size: 25px;
 }
 
 .red {
@@ -59,4 +60,5 @@
 .new-tweet .error {
   color: #D8000C;
   background-color: #FFD2D2;
+  font-size: 20px;
 }
