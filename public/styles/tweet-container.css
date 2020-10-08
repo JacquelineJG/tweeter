@@ -52,7 +52,6 @@ article:hover .tweet-top .handle {
 .tweet-bottom {
   display: flex;
   width:95%;
-  flex-grow: 1;
   margin-top: 0.5em;
   margin-bottom: 1em;
   border-left-color: #f4f1ec;
@@ -64,8 +63,8 @@ article:hover .tweet-top .handle {
 
 .img {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: bottom;
   padding: 20px; 
   /* child-property */
   flex-grow: 1;
@@ -91,14 +90,12 @@ article:hover .tweet-top .handle {
   width: 100%;
 }
 
-.date .time {
+.time {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
-  flex-direction: row;
-  font-size: 20px;
+  align-items: flex-start;
+ 
   /* child-property */
   flex-grow: 1;
-  width: 100%;
 }
 

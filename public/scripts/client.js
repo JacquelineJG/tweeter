@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const renderTweets = function(tweets) {
   const tweetContainer = $('.tweet-container').html('')
   console.log(tweets);
@@ -15,6 +9,33 @@ const renderTweets = function(tweets) {
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 }
+
+function relativeTime(date) {
+  let seconds = Math.floor((new Date() - date) / 1000);
+  let interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " months";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " minutes";
+  }
+  return Math.floor(seconds) + " seconds";
+}
+
 
 const escape =  function(str) {
   console.log('str', str)
@@ -37,8 +58,8 @@ let $tweet = $(`<article>
 <p>${safeHTML}</p>
 </div>
 <div class='tweet-bottom'>
-<div class='date'>
-<time datetime='${tweet.created_at}'>
+<div class='time'>
+${relativeTime(tweet.created_at)}
 </div>
 <div class='symbols'>
 <i class="fa fa-flag" style="font-size:20px;color:#6e50f2"></i>
@@ -49,8 +70,7 @@ let $tweet = $(`<article>
 </article>`);
 
 return $tweet;
-}
-
+}  
 
 $(document).ready(function() {
   console.log('Ready!')
@@ -66,13 +86,13 @@ $(document).ready(function() {
       $('.new-tweet .counter').val(140)
     })
     } else if ($('.new-tweet .counter').val() == 140) {
-      $('.error').prepend('Error: Tweet cannot be empty').hide().slideDown(1000);
+      $('.error').text('Error: Tweet cannot be empty').hide().slideDown(2000);
       setTimeout(function() { 
         $(".error").slideUp(); 
         $(".error").empty();
       }, 3000);
     } else if ($('.new-tweet .counter').val() <= 0) {
-      $('.error').prepend('Error: Tweet cannot be more than 140 characters').hide().slideDown(1000);
+      $('.error').text('Error: Tweet cannot be more than 140 characters').hide().slideDown(2000);
       setTimeout(function() { 
         $(".error").slideUp(); 
         $(".error").empty();

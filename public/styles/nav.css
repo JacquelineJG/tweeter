@@ -39,15 +39,32 @@ span {
   flex-grow: 1;
   margin-bottom: 0px;
 }
-.i {
+/* .i {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   align-items: baseline;
-  align-items: center;
+  align-items: flex-end;
   margin: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
   /* child-property */
   flex-grow: 1;
   margin-top: 0px;
+} */
+.fa {
+  display: flex;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: #d98200;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  } 
 }
