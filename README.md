@@ -2,15 +2,20 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-Welcome to Tweeter! You can create tweets and have them immediately displayed to the same page! 
+Welcome to Tweeter! You can create tweets and have them immediately displayed to the same page! Resposive design for mobile users.
 **Write any thought, as long as it's less than _140_ characters!**
 
-##Features:
+## Features:
 - Create 140 character tweets that post to the same page in real time
 - Tweets are displayed newest to oldest using relative time
 - Character count keeps track of characters while typing, and turns red when over the character limit
 - Responsive design changes depending on screen width
 - Hover over tweets to see interactive design
+
+## Screenshots
+ 
+!["Screenshot of wide screen Tweeter page"](https://github.com/JacquelineJG/tweeter/blob/master/docs/Laptop-Screen-Tweeter-Page.png?raw=true)
+!["Screenshot of small screen Tweeter page"](https://github.com/JacquelineJG/tweeter/blob/master/docs/Smaller-Screen-Tweeter-Page.png?raw=true)
 
 ## Getting Started
 
@@ -24,7 +29,3 @@ Welcome to Tweeter! You can create tweets and have them immediately displayed to
 - Express
 - Node 5.10.x or above
 
-## Screenshots
- 
-!["Screenshot of wide screen Tweeter page"](https://github.com/JacquelineJG/tweeter/blob/master/docs/Laptop-Screen-Tweeter-Page.png?raw=true)
-!["Screenshot of small screen Tweeter page"](https://github.com/JacquelineJG/tweeter/blob/master/docs/Smaller-Screen-Tweeter-Page.png?raw=true)
